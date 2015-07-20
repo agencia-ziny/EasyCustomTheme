@@ -35,7 +35,7 @@
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-                <geral translate="label">
+                <definicoes translate="label">
                     <label>Global Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1</sort_order>
@@ -64,7 +64,7 @@
                             <show_in_store>1</show_in_store>
                         </importante>
                     </fields>
-                </geral>
+                </definicoes>
                 <conteudo translate="label">
                     <label>Content Settings</label>
                     <frontend_type>text</frontend_type>
@@ -75,7 +75,7 @@
                     <fields>
                         <fonte_familia translate="label comment">
                             <label>Font Family</label>
-                            <comment>Select a font to change your font style.</comment>
+                            <comment>This font family will be used for all content text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_fonte</source_model>
                             <sort_order>1</sort_order>
@@ -85,17 +85,19 @@
                         </fonte_familia>
                         <link_cor translate="label comment">
                             <label>Link Color</label>
-                            <comment>This color will be used for Content Link</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for content link.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+                            <show_in_store>1</show_in_store>                            
                         </link_cor>
                         <link_hover translate="label comment">
                             <label>Link Color Hover</label>
-                            <comment>This color will be used for Content Link Mouseover</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for content link mouseover.</comment>
+                            <frontend_type>text</frontend_type>	
+                            <validate>color</validate>						
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -103,8 +105,9 @@
                         </link_hover>
                         <fonte_cor translate="label comment">
                             <label>Font Color</label>
-                            <comment>This color will be used for Content Text.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for content text.</comment>
+                            <frontend_type>text</frontend_type>	
+                            <validate>color</validate>						
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -112,8 +115,8 @@
                         </fonte_cor>
                         <fonte_tamanho translate="label comment">
                             <label>Font Size</label>
-                            <comment>This size will be used for Content Text.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This size will be used for content text.</comment>
+                            <frontend_type>text</frontend_type>						
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -121,17 +124,27 @@
                         </fonte_tamanho>
                         <fonte_linha translate="label comment">
                             <label>Font Line Height</label>
-                            <comment>This line height will be used for Content Text.</comment>
+                            <comment>This line height will be used for content text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </fonte_linha>    
+                        </fonte_linha>[
+                        <body_cor translate="label comment">
+                            <label>Background Color</label>
+                            <comment>This color will be used for content background.</comment>
+                            <frontend_type>text</frontend_type>	
+                            <validate>color</validate>						
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </body_cor>                        
                     </fields>
-                </conteudo>                
-                <botoes_global translate="label">
-                    <label>Buttons Settings</label>
+                </conteudo>
+                <cabecalho translate="label">
+                    <label>Header Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>3</sort_order>
                     <show_in_default>1</show_in_default>
@@ -140,8 +153,454 @@
                     <fields>
                         <fundo translate="label comment">
                             <label>Background Color</label>
-                            <comment>This color will be used for button background.</comment>
+                            <comment>This color will be used for header background.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fundo>                        
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>This font family will be used for header text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>This color will be used for header text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Font Color Hover</label>
+                            <comment>This color will be used for header text mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>This size will be used for header text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>This font weight will be used for header text.</comment>
                             <frontend_type>text</frontend_type>							
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Text Line Height</label>
+                            <comment>This line height will be used for header text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>This transform will be used for header text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>                        
+                    </fields>
+                </cabecalho>
+                <topo translate="label">
+                    <label>Top Header Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fundo translate="label comment">
+                            <label>Background Color</label>
+                            <comment>This color will be used for header background.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fundo>                        
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>This font family will be used for header text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>This color will be used for header text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Font Color Hover</label>
+                            <comment>This color will be used for header text mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>This size will be used for header text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>This font weight will be used for header text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Text Line Height</label>
+                            <comment>This line height will be used for header text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>This transform will be used for header text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>                        
+                    </fields>
+                </topo>
+                <menu translate="label">
+                    <label>Menu Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fundo translate="label comment">
+                            <label>Background Color</label>
+                            <comment>This color will be used for full menu background.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fundo>
+                        <fundo_hover translate="label comment">
+                            <label>Background Item Hover</label>
+                            <comment>This color will be used for menu item background on mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fundo_hover>                        
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>This font family will be used for menu text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>This color will be used for menu text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Font Color Hover</label>
+                            <comment>This color will be used for menu text mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>This size will be used for menu text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>This font weight will be used for menu text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Text Line Height</label>
+                            <comment>This line height will be used for menu text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>This transform will be used for menu text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>                        
+                    </fields>
+                </menu>
+                <rodape translate="label">
+                    <label>Footer Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fundo translate="label comment">
+                            <label>Background Color</label>
+                            <comment>This color will be used for full footer background.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fundo>                        
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>This font family will be used for footer text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>This color will be used for footer text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_link translate="label comment">
+                            <label>Link Color</label>
+                            <comment>This color will be used for footer text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_link>
+                        <fonte_hover translate="label comment">
+                            <label>Link Color Hover</label>
+                            <comment>This color will be used for footer text mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>This size will be used for footer text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>This font weight will be used for footer text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Text Line Height</label>
+                            <comment>This line height will be used for footer text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>This transform will be used for footer text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>                        
+                    </fields>
+                </rodape>
+                <rodapes translate="label">
+                    <label>Footer Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>                        
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>This font family will be used for footer titles text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>This color will be used for footer titles text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Link Color Hover</label>
+                            <comment>This color will be used for footer titles text mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>This size will be used for footer titles text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>This font weight will be used for footer titles text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Text Line Height</label>
+                            <comment>This line height will be used for footer text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>This transform will be used for footer text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>                        
+                    </fields>
+                </rodapes>
+                <botoes translate="label">
+                    <label>Buttons Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>7</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fundo translate="label comment">
+                            <label>Background Color</label>
+                            <comment>This color will be used for button background.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -150,16 +609,28 @@
                         <fundo_hover translate="label comment">
                             <label>Background Hover</label>
                             <comment>This color will be used for background mouseover</comment>
-                            <frontend_type>text</frontend_type>							
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </fundo_hover>
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>This font family will be used for all content text.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
                         <fonte translate="label comment">
                             <label>Font Color</label>
-                            <comment>This color will be used for button Text.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for button text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -167,8 +638,9 @@
                         </fonte>
                         <fonte_hover translate="label comment">
                             <label>Font Color Hover</label>
-                            <comment>This color will be used for Content Text.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for button text mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -176,8 +648,8 @@
                         </fonte_hover>
                         <fonte_tamanho translate="label comment">
                             <label>Font Size</label>
-                            <comment>This size will be used for Content Text.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This size will be used for buton text.</comment>
+                            <frontend_type>text</frontend_type>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -185,7 +657,7 @@
                         </fonte_tamanho>
                         <fonte_largura translate="label comment">
                             <label>Font Weight</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This font weight will be used for button text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
@@ -193,9 +665,9 @@
                             <show_in_store>1</show_in_store>
                         </fonte_largura>
                         <fonte_linha translate="label comment">
-                            <label>Font Line Height</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <label>Text Line Height</label>
+                            <comment>This line height will be used for button text.</comment>
+                            <frontend_type>text</frontend_type>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -203,7 +675,7 @@
                         </fonte_linha>
                         <fonte_tipo translate="label comment">
                             <label>Text Transform</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This transform will be used for button text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_transforma</source_model>
                             <sort_order>8</sort_order>
@@ -213,35 +685,46 @@
                         </fonte_tipo>
                         <borda translate="label comment">
                             <label>Border Color</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for button border.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>9</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </borda>
+                        <borda_hover translate="label comment">
+                            <label>Border Color Hover</label>
+                            <comment>This color will be used for button border on mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </borda_hover>
                         <borda_raio translate="label comment">
                             <label>Border Radius</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This border will be used for button radius.</comment>
+                            <frontend_type>text</frontend_type>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </borda_raio>
                     </fields>
-                </botoes_global>
+                </botoes>
                 <precos translate="label">
                     <label>Prices Settings</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>4</sort_order>
+                    <sort_order>8</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
                         <fonte_familia translate="label comment">
                             <label>Font Family</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This font family will be used for price text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_fonte</source_model>
                             <sort_order>1</sort_order>
@@ -251,8 +734,9 @@
                         </fonte_familia>
                         <fonte translate="label comment">
                             <label>Price Color</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for price text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -260,8 +744,9 @@
                         </fonte>
                         <fonte_hover translate="label comment">
                             <label>Price Color Hover</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for button price on mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -269,7 +754,7 @@
                         </fonte_hover>
                         <fonte_tamanho translate="label comment">
                             <label>Font Size</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This size will be used for price text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -278,7 +763,7 @@
                         </fonte_tamanho>
                         <fonte_largura translate="label comment">
                             <label>Price Font Weight</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This wheight will be used for price text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_largura</source_model>
                             <sort_order>4</sort_order>
@@ -288,7 +773,7 @@
                         </fonte_largura>
                         <fonte_linha translate="label comment">
                             <label>Price Line Height</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This line height will be used for price text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
@@ -297,7 +782,7 @@
                         </fonte_linha>
                         <fonte_posicao translate="label comment">
                             <label>Text Position</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This position will be used for price text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_posicao</source_model>
                             <sort_order>7</sort_order>
@@ -310,14 +795,14 @@
                 <titulos translate="label">
                     <label>Category and Page Titles</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>5</sort_order>
+                    <sort_order>9</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
                         <fonte_familia translate="label comment">
                             <label>Font Family</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This font family will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_fonte</source_model>
                             <sort_order>1</sort_order>
@@ -327,8 +812,9 @@
                         </fonte_familia>
                         <fonte translate="label comment">
                             <label>Font Color</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for titles text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -336,8 +822,9 @@
                         </fonte>
                         <fonte_hover translate="label comment">
                             <label>Font Color Hover</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for titles text on mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -345,7 +832,7 @@
                         </fonte_hover>
                         <fonte_tamanho translate="label comment">
                             <label>Font Size</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This size will be used for titles text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -354,7 +841,7 @@
                         </fonte_tamanho>
                         <fonte_largura translate="label comment">
                             <label>Font Weight</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This weight will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_largura</source_model>
                             <sort_order>4</sort_order>
@@ -364,7 +851,7 @@
                         </fonte_largura>
                         <fonte_linha translate="label comment">
                             <label>Font Line Height</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This line height will be used for titles text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
@@ -373,7 +860,7 @@
                         </fonte_linha>
                         <fonte_tipo translate="label comment">
                             <label>Text Transform</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This transform will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_transforma</source_model>
                             <sort_order>6</sort_order>
@@ -383,7 +870,7 @@
                         </fonte_tipo>
                         <fonte_posicao translate="label comment">
                             <label>Text Position</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This position will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_posicao</source_model>
                             <sort_order>7</sort_order>
@@ -393,8 +880,9 @@
                         </fonte_posicao>
                         <borda_cor translate="label comment">
                             <label>Borber Bottom Color</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for titles border bottom.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -405,14 +893,14 @@
                 <blocos translate="label">
                     <label>Block Titles</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>6</sort_order>
+                    <sort_order>10</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
                         <fonte_familia translate="label comment">
                             <label>Font Family</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This font family will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_fonte</source_model>
                             <sort_order>1</sort_order>
@@ -422,8 +910,9 @@
                         </fonte_familia>
                         <fonte translate="label comment">
                             <label>Font Color</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for titles text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -431,8 +920,9 @@
                         </fonte>
                         <fonte_hover translate="label comment">
                             <label>Font Color Hover</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for titles text on mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -440,7 +930,7 @@
                         </fonte_hover>
                         <fonte_tamanho translate="label comment">
                             <label>Font Size</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This size will be used for titles text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -449,7 +939,7 @@
                         </fonte_tamanho>
                         <fonte_largura translate="label comment">
                             <label>Font Weight</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This weight will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_largura</source_model>
                             <sort_order>4</sort_order>
@@ -459,7 +949,7 @@
                         </fonte_largura>
                         <fonte_linha translate="label comment">
                             <label>Font Line Height</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This line height will be used for titles text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
@@ -468,7 +958,7 @@
                         </fonte_linha>
                         <fonte_tipo translate="label comment">
                             <label>Text Transform</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This transform will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_transforma</source_model>
                             <sort_order>6</sort_order>
@@ -478,7 +968,7 @@
                         </fonte_tipo>
                         <fonte_posicao translate="label comment">
                             <label>Text Position</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This position will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_posicao</source_model>
                             <sort_order>7</sort_order>
@@ -491,14 +981,14 @@
                 <categorias translate="label">
                     <label>Block Sub-Titles</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>7</sort_order>
+                    <sort_order>11</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
                         <fonte_familia translate="label comment">
                             <label>Font Family</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This font family will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_fonte</source_model>
                             <sort_order>1</sort_order>
@@ -508,8 +998,9 @@
                         </fonte_familia>
                         <fonte translate="label comment">
                             <label>Font Color</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for titles text.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -517,8 +1008,9 @@
                         </fonte>
                         <fonte_hover translate="label comment">
                             <label>Font Color Hover</label>
-                            <comment>Defines whether the module is active or not.</comment>
-                            <frontend_type>text</frontend_type>							
+                            <comment>This color will be used for titles text on mouseover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -526,7 +1018,7 @@
                         </fonte_hover>
                         <fonte_tamanho translate="label comment">
                             <label>Font Size</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This size will be used for titles text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -535,7 +1027,7 @@
                         </fonte_tamanho>
                         <fonte_largura translate="label comment">
                             <label>Font Weight</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This weight will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_largura</source_model>
                             <sort_order>4</sort_order>
@@ -545,7 +1037,7 @@
                         </fonte_largura>
                         <fonte_linha translate="label comment">
                             <label>Font Line Height</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This line height will be used for titles text.</comment>
                             <frontend_type>text</frontend_type>							
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
@@ -554,7 +1046,7 @@
                         </fonte_linha>
                         <fonte_tipo translate="label comment">
                             <label>Text Transform</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This transform will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_transforma</source_model>
                             <sort_order>6</sort_order>
@@ -564,7 +1056,7 @@
                         </fonte_tipo>
                         <fonte_posicao translate="label comment">
                             <label>Text Position</label>
-                            <comment>Defines whether the module is active or not.</comment>
+                            <comment>This position will be used for titles text.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>editafacil/config_posicao</source_model>
                             <sort_order>7</sort_order>
@@ -572,6 +1064,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </fonte_posicao>
+                        <borda_cor translate="label comment">
+                            <label>Borber Bottom Color</label>
+                            <comment>This color will be used for titles border bottom.</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </borda_cor>
                     </fields>
                 </categorias>
             </groups>

@@ -42,6 +42,13 @@
         </layout>
     </frontend>
     <adminhtml>
+        <layout>
+            <updates>
+                <editafacil>
+                    <file>ziny/editafacil.xml</file>
+                </editafacil>
+            </updates>
+        </layout>
         <translate>
             <modules>
                 <Ziny_EditaFacil>
@@ -50,7 +57,7 @@
                     </files>
                 </Ziny_EditaFacil>
             </modules>
-        </translate>
+        </translate>        
         <acl>
             <resources>
                 <admin>
@@ -95,19 +102,13 @@
     </global>
     <default>
         <editafacil>
-            <general>
+            <geral>
                 <ativo>0</ativo>
-                <cor_fundo>#ffffff</cor_fundo>
-                <cor_esconder>#ffffff</cor_esconder>
-                <cor_escondido>#3399cc</cor_escondido>
-                <distancia_topo>20%</distancia_topo>
-                <distancia_lateral>.5%</distancia_lateral>
-                <caixa_lado>right</caixa_lado>
-                <caixa_tamanho>260px</caixa_tamanho>
-            </general>
+                <importante>0</importante>
+            </geral>
         </editafacil>
     </default>
-    <admin>
+    <admin>        
         <routers>
             <editafacil>
                 <use>admin</use>
