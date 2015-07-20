@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Edita Fácil
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ziny
+ * @package    EditaFacil
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
+ */
+-->
+<config>
+    <tabs>
+        <editafacil translate="label">
+            <label>Easy Custom Theme</label>
+            <sort_order>202</sort_order>
+        </editafacil>
+    </tabs>
+    <sections>
+        <editafacil translate="label" module="editafacil">
+            <label>Settings</label>
+            <class>editafacil</class>
+            <tab>editafacil</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>9999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <geral translate="label">
+                    <label>Global Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <ativo translate="label comment">
+                            <label>Enable</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>							
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ativo>
+                        <importante translate="label comment">
+                            <label>Define Style as Important</label>
+                            <comment>Set all style as important.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>							
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </importante>
+                    </fields>
+                </geral>
+                <conteudo translate="label">
+                    <label>Content Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>Select a font to change your font style.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <link_cor translate="label comment">
+                            <label>Link Color</label>
+                            <comment>This color will be used for Content Link</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_cor>
+                        <link_hover translate="label comment">
+                            <label>Link Color Hover</label>
+                            <comment>This color will be used for Content Link Mouseover</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover>
+                        <fonte_cor translate="label comment">
+                            <label>Font Color</label>
+                            <comment>This color will be used for Content Text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_cor>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>This size will be used for Content Text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_linha translate="label comment">
+                            <label>Font Line Height</label>
+                            <comment>This line height will be used for Content Text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>    
+                    </fields>
+                </conteudo>                
+                <botoes_global translate="label">
+                    <label>Buttons Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fundo translate="label comment">
+                            <label>Background Color</label>
+                            <comment>This color will be used for button background.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fundo>
+                        <fundo_hover translate="label comment">
+                            <label>Background Hover</label>
+                            <comment>This color will be used for background mouseover</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fundo_hover>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>This color will be used for button Text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Font Color Hover</label>
+                            <comment>This color will be used for Content Text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>This size will be used for Content Text.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Font Line Height</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>
+                        <borda translate="label comment">
+                            <label>Border Color</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </borda>
+                        <borda_raio translate="label comment">
+                            <label>Border Radius</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </borda_raio>
+                    </fields>
+                </botoes_global>
+                <precos translate="label">
+                    <label>Prices Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Price Color</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Price Color Hover</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Price Font Weight</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_largura</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Price Line Height</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_posicao translate="label comment">
+                            <label>Text Position</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_posicao</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_posicao>
+                    </fields>
+                </precos>
+                <titulos translate="label">
+                    <label>Category and Page Titles</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Font Color Hover</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_largura</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Font Line Height</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>
+                        <fonte_posicao translate="label comment">
+                            <label>Text Position</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_posicao</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_posicao>
+                        <borda_cor translate="label comment">
+                            <label>Borber Bottom Color</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </borda_cor>
+                    </fields>
+                </titulos>
+                <blocos translate="label">
+                    <label>Block Titles</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Font Color Hover</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_largura</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Font Line Height</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>
+                        <fonte_posicao translate="label comment">
+                            <label>Text Position</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_posicao</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_posicao>
+                    </fields>
+                </blocos>
+                <categorias translate="label">
+                    <label>Block Sub-Titles</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>7</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fonte_familia translate="label comment">
+                            <label>Font Family</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_fonte</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_familia>
+                        <fonte translate="label comment">
+                            <label>Font Color</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte>
+                        <fonte_hover translate="label comment">
+                            <label>Font Color Hover</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_hover>
+                        <fonte_tamanho translate="label comment">
+                            <label>Font Size</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tamanho>
+                        <fonte_largura translate="label comment">
+                            <label>Font Weight</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_largura</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_largura>
+                        <fonte_linha translate="label comment">
+                            <label>Font Line Height</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>text</frontend_type>							
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_linha>
+                        <fonte_tipo translate="label comment">
+                            <label>Text Transform</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_transforma</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_tipo>
+                        <fonte_posicao translate="label comment">
+                            <label>Text Position</label>
+                            <comment>Defines whether the module is active or not.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>editafacil/config_posicao</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonte_posicao>
+                    </fields>
+                </categorias>
+            </groups>
+        </editafacil>
+    </sections>
+</config>
