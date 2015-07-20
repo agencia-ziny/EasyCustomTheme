@@ -1,2 +1,2 @@
-# Magento extension: EasyCustomTheme
+# Magento extension: Easy Custom Theme
 EasyCustomTheme
