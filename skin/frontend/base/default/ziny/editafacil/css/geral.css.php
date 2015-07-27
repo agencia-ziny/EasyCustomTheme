@@ -24,33 +24,9 @@ umask(0);
 Mage::app();
 
 // Get defines
-//$definicoes = Mage::getStoreConfig('editafacil/geral');
-//
-//#$conteudo = Mage::getStoreConfig('editafacil/conteudo');
-//
-//#$cabecalho = Mage::getStoreConfig('editafacil/cabecalho');
-//
-//#$topo = Mage::getStoreConfig('editafacil/topo');
-//
-//#$menu = Mage::getStoreConfig('editafacil/menu');
-//
-//#$rodape = Mage::getStoreConfig('editafacil/rodape');
-//
-//$rodapes = Mage::getStoreConfig('editafacil/rodapes');
-//
-//$botoes = Mage::getStoreConfig('editafacil/botoes_global');
-//
-//$precos = Mage::getStoreConfig('editafacil/precos');
-//
-//$titulos = Mage::getStoreConfig('editafacil/titulos');
-//
-//$blocos = Mage::getStoreConfig('editafacil/blocos');
-//
-//$categorias = Mage::getStoreConfig('editafacil/categorias');
-//
 $editafacil = Mage::getStoreConfig('editafacil');
 
-$lista = array('definicoes','conteudo','cabecalho','topo','menu','rodape','rodapes','botoes','precos','titulo','blocos','blocos','categorias');
+$lista = array('definicoes','conteudo','topo','cabecalho','menu','rodape','rodapes','botoes','precos','titulo','blocos','blocos','categorias');
 
 foreach ($lista as $item){
 
@@ -149,42 +125,6 @@ a:hover {
     <?php if ($cabecalho['fonte_tipo']):?>
     text-transform: <?php echo $cabecalho['fonte_tipo'] . $importante; ?>;
     <?php endif;?>
-}
-.header-container .top-bar {
-    <?php if ($topo['fundo']):?>
-    background: #<?php echo $topo['fundo'] . $importante; ?>;
-    <?php endif;?>
-}
-.top-bar .top-links li a {
-    <?php if ($topo['fundo']):?>
-    color: #<?php echo $topo['fonte'] . $importante; ?>;
-    <?php endif;?>
-    <?php if ($topo['fonte_familia']):?>
-    font-family: <?php echo $topo['fonte_familia'] . $importante; ?>;
-    <?php endif;?>
-    <?php if ($topo['fonte_tamanho']):?>
-    font-size: <?php echo $topo['fonte_tamanho'] . $importante; ?>;
-    <?php endif;?>
-    <?php if ($topo['fonte_largura']):?>
-    font-weight: <?php echo $topo['fonte_largura'] . $importante; ?>;
-    <?php endif;?>
-    <?php if ($topo['fonte_linha']):?>
-    line-height: <?php echo $topo['fonte_linha'] . $importante; ?>;
-    <?php endif;?>
-    <?php if ($topo['fonte_tipo']):?>
-    text-transform: <?php echo $topo['fonte_tipo'] . $importante; ?>;
-    <?php endif;?>
-}
-.top-bar .top-links li a:hover {
-    <?php if ($topo['fonte_hover']):?>
-    color: #<?php echo $topo['fonte_hover'] . $importante; ?>;
-    <?php endif;?>
-}
-.header-wrapper .main-nav, #header-nav {
-
-}
-.main-nav .menu > li > a {
-
 }
 .button, .link-wishlist, .link-compare, .cart-table .product-cart-actions .button, #co-shipping-method-form .buttons-set .button, .footer .button {
     <?php if ($botoes['fundo']):?>
@@ -324,5 +264,130 @@ body:not(.customer-account) .block:first-child .block-title {
     <?php endif;?>
     <?php if ($categorias['fonte_posicao']):?>
     text-align: <?php echo $categorias['fonte_posicao'] . $importante; ?>;
+    <?php endif;?>
+}
+.top-links, .header-language-background {
+    <?php if ($topo['fundo']):?>
+    background-color: #<?php echo $topo['fundo'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($topo['fonte']):?>
+    color: #<?php echo $topo['fonte'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($topo['fonte_tamanho']):?>
+    font-size: <?php echo $topo['fonte_tamanho'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($topo['fonte_largura']):?>
+    font-weight: <?php echo $topo['fonte_largura'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($topo['fonte_linha']):?>
+    line-height: <?php echo $topo['fonte_linha'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($topo['fonte_tipo']):?>
+    text-transform: <?php echo $topo['fonte_tipo'] . $importante; ?>;
+    <?php endif;?>
+}
+.header-language-container{
+    <?php if ($topo['fonte_familia']):?>
+    font-family: <?php echo $topo['fonte_familia'] . $importante; ?>;
+    <?php endif;?>
+}
+.top-links a:hover, .header-language-background a:hover{
+    <?php if ($topo['fonte_hover']):?>
+    color: #<?php echo $topo['fonte_hover'] . $importante; ?>;
+    <?php endif;?>
+}
+#header-nav li a{
+    <?php if ($menu['fonte_familia']):?>
+    font-family: <?php echo $menu['fonte_familia'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($menu['fonte']):?>
+    color: #<?php echo $menu['fonte'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($menu['fonte_tamanho']):?>
+    font-size: <?php echo $menu['fonte_tamanho'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($menu['fonte_largura']):?>
+    font-weight: <?php echo $menu['fonte_largura'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($menu['fonte_linha']):?>
+    line-height: <?php echo $menu['fonte_linha'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($menu['fonte_tipo']):?>
+    text-transform: <?php echo $menu['fonte_tipo'] . $importante; ?>;
+    <?php endif;?>
+}
+#header-nav li a:hover{
+    <?php if ($menu['fundo_hover']):?>
+    background-color: #<?php echo $menu['fundo_hover'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($menu['fonte_hover']):?>
+    color: #<?php echo $menu['fonte_hover'] . $importante; ?>;
+    <?php endif;?>
+}
+#header-nav{
+    <?php if ($menu['fundo']):?>
+    background-color: <?php echo $menu['fundo'] . $importante; ?>;
+    <?php endif;?>
+}
+.footer-container{
+    <?php if ($rodape['fundo']):?>
+    background-color: #<?php echo $rodape['fundo'] . $importante; ?>;
+    <?php endif;?>
+}
+.footer{
+    <?php if ($rodape['fonte_familia']):?>
+    font-family: <?php echo $rodape['fonte_familia'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodape['fonte']):?>
+    color: #<?php echo $rodape['fonte'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodape['fonte_largura']):?>
+    font-weight: <?php echo $rodape['fonte_largura'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodape['fonte_linha']):?>
+    line-height: <?php echo $rodape['fonte_linha'] . $importante; ?>;
+    <?php endif;?>
+}
+.footer a{
+    <?php if ($rodape['fonte_link']):?>
+    color: #<?php echo $rodape['fonte_link'] . $importante; ?>;
+    <?php endif;?>
+}
+.footer a:hover{
+    <?php if ($rodape['fonte_hover']):?>
+    color: #<?php echo $rodape['fonte_hover'] . $importante; ?>;
+    <?php endif;?>
+}
+.footer .links{
+    <?php if ($rodape['fonte_tamanho']):?>
+    font-size: <?php echo $rodape['fonte_tamanho'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodape['fonte_tipo']):?>
+    text-transform: <?php echo $rodape['fonte_tipo'] . $importante; ?>;
+    <?php endif;?>
+}
+.footer .block-title span{
+    <?php if ($rodapes['fonte_familia']):?>
+    font-family: <?php echo $rodapes['fonte_familia'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodapes['fonte']):?>
+    color: #<?php echo $rodapes['fonte'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodapes['fonte_tamanho']):?>
+    font-size: <?php echo $rodapes['fonte_tamanho'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodapes['fonte_largura']):?>
+    font-weight: <?php echo $rodapes['fonte_largura'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodapes['fonte_linha']):?>
+    line-height: <?php echo $rodapes['fonte_linha'] . $importante; ?>;
+    <?php endif;?>
+    <?php if ($rodapes['fonte_tipo']):?>
+    text-transform: <?php echo $rodapes['fonte_tipo'] . $importante; ?>;
+    <?php endif;?>
+}
+.footer .block-title a:hover{
+    <?php if ($rodapes['fonte_hover']):?>
+    color: #<?php echo $rodapes['fonte_hover'] . $importante; ?>;
     <?php endif;?>
 }

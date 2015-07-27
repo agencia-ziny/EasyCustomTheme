@@ -22,19 +22,19 @@ class Ziny_EditaFacil_Model_Config_Transforma {
         return array(
             array(
                 'value' => '',
-                'label' => 'Nenhum'),
+                'label' => Mage::helper('editafacil')->__('None')),
             array(
                 'value' => 'capitalize',
-                'label' => 'Capitalize'),
+                'label' => Mage::helper('editafacil')->__('Capitalize')),
             array(
                 'value' => 'uppercase',
-                'label' => 'Uppercase'),
+                'label' => Mage::helper('editafacil')->__('Uppercase')),
             array(
                 'value' => 'lowercase',
-                'label' => 'Lowercase'),
+                'label' => Mage::helper('editafacil')->__('Lowercase')),
             array(
                 'value' => 'normal',
-                'label' => 'Normal')
+                'label' => Mage::helper('editafacil')->__('Normal'))
         );
     }
 

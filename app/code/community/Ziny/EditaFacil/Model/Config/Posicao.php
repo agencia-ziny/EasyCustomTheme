@@ -22,16 +22,16 @@ class Ziny_EditaFacil_Model_Config_Posicao {
         return array(
             array(
                 'value' => '',
-                'label' => 'Nenhum'),
+                'label' => Mage::helper('editafacil')->__('None')),
             array(
                 'value' => 'left',
-                'label' => 'Left'),
+                'label' => Mage::helper('editafacil')->__('Left')),
             array(
                 'value' => 'center',
-                'label' => 'Center'),
+                'label' => Mage::helper('editafacil')->__('Center')),
             array(
                 'value' => 'right',
-                'label' => 'Right')
+                'label' => Mage::helper('editafacil')->__('Right'))
         );
     }
 

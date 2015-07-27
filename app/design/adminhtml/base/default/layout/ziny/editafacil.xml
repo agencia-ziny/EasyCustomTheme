@@ -18,11 +18,11 @@
  */
 -->
 <layout version="1.0.0">
-    <adminhtml_system_config_edit>
+    <default translate="label" module="page">
         <reference name="head">
-            <action method="addJs" ifconfig="editafacil/geral/ativo">
-                <script>jscolor/jscolor.js</script>
+            <action method="addCss" ifconfig="editafacil/definicoes/ativo">
+                <stylesheet>ziny/editafacil/css/geral.css.php</stylesheet>
             </action>
         </reference>
-    </adminhtml_system_config_edit>
+    </default>
 </layout>
