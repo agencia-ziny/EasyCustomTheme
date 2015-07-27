@@ -1,6 +1,6 @@
 <?php
 /**
- * Edita Fácil
+ * Edita FÃ¡cil
  *
  * NOTICE OF LICENSE
  *
@@ -11,9 +11,9 @@
  *
  * @category   Ziny
  * @package    EditaFacil
- * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     Agência Ziny <dev@agenciaziny.com.br>
+ * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
  */
 define('MAGENTO_ROOT', (dirname(__FILE__) . '../../../../../../../../'));
 
@@ -23,11 +23,19 @@ require_once MAGENTO_ROOT . 'app/Mage.php';
 umask(0);
 Mage::app();
 
-// Get defines
+/*
+ * Recupera as definições do módulo no ACL
+ */
 $editafacil = Mage::getStoreConfig('editafacil');
 
+/*
+ * Monta a lista de itens definidos
+ */
 $lista = array('definicoes','conteudo','topo','cabecalho','menu','rodape','rodapes','botoes','precos','titulo','blocos','blocos','categorias');
 
+/*
+ * Laço de variáveis das definições
+ */
 foreach ($lista as $item){
 
     ${$item} = $editafacil[$item];
@@ -386,7 +394,7 @@ body:not(.customer-account) .block:first-child .block-title {
     text-transform: <?php echo $rodapes['fonte_tipo'] . $importante; ?>;
     <?php endif;?>
 }
-.footer .block-title a:hover{
+.footer .block-title a:hover {
     <?php if ($rodapes['fonte_hover']):?>
     color: #<?php echo $rodapes['fonte_hover'] . $importante; ?>;
     <?php endif;?>

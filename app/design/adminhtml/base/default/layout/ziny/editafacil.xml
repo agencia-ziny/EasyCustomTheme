@@ -17,12 +17,12 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
-<layout version="1.0.0">
-    <default translate="label" module="page">
+<layout version="1.0.1">
+    <adminhtml_system_config_edit>
         <reference name="head">
-            <action method="addCss" ifconfig="editafacil/definicoes/ativo">
-                <stylesheet>ziny/editafacil/css/geral.css.php</stylesheet>
+            <action method="addJs" ifconfig="editafacil/definicoes/ativo">
+                <script>jscolor/jscolor.js</script>
             </action>
         </reference>
-    </default>
+    </adminhtml_system_config_edit>
 </layout>
