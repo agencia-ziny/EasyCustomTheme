@@ -1,4 +1,4 @@
-# [Magento extension: Easy Custom Theme](http://www.magentocommerce.com/magento-connect/)
+# [Magento extension: Easy Custom Theme](http://www.magentocommerce.com/magento-connect/catalog/product/view/id/28965/)
 ###Yes! Now you can change your theme without advanced programming skills!
 
 With this module you can change the colors of your store without advanced programming skills. The changes were based on the **"Default RWD Theme** but beyond it, has some global parameters that can be easily changed.
@@ -36,7 +36,7 @@ Located in the folder:
 
 
 #### For more information, download and install
-Please see on [**Magento Connect**](http://www.magentocommerce.com/magento-connect/)
+Please see on [**Magento Connect**](http://www.magentocommerce.com/magento-connect/catalog/product/view/id/28965/)
 
 ####Having Issues?
 
