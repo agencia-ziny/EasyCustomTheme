@@ -109,8 +109,61 @@
             <conteudo>
                 <link_cor>555555</link_cor>
                 <link_hover>333333</link_hover>
-                <fonte_cor>444444</fonte_cor>
+                <body_cor>FFFFFF</body_cor>
+                <fonte_cor>555555</fonte_cor>
             </conteudo>
+            <topo>
+                <fundo>FFFFFF</fundo>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+            </topo>
+            <cabecalho>
+                <fundo>FFFFFF</fundo>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+            </cabecalho>
+            <menu>
+                <fundo_hover>FFFFFF</fundo_hover>
+                <fundo>FFFFFF</fundo>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+            </menu>
+            <rodape>
+                <fundo>FFFFFF</fundo>
+                <fonte>555555</fonte>
+                <fonte_link>555555</fonte_link>
+                <fonte_hover>3399CC</fonte_hover>
+            </rodape>
+            <rodapes>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+            </rodapes>
+            <botoes>
+                <fundo>FFFFFF</fundo>
+                <fundo_hover>FFFFFF</fundo_hover>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+                <borda>555555</borda>
+                <borda_hover>333333</borda_hover>
+            </botoes>
+            <precos>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+            </precos>
+            <titulos>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+                <borda_cor>3399CC</borda_cor>
+            </titulos>
+            <blocos>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+            </blocos>
+            <categorias>
+                <fonte>555555</fonte>
+                <fonte_hover>333333</fonte_hover>
+                <borda_cor>3399CC</borda_cor>
+            </categorias>
         </editafacil>
     </default>
     <admin>        
