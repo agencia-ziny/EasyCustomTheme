@@ -1,7 +1,7 @@
 # [Magento extension: Easy Custom Theme](http://www.magentocommerce.com/magento-connect/easy-color-theme.html)
 ###Yes! Now you can change your theme without advanced programming skills!
 
-With this module you can change the colors of your store without advanced programming skills. The changes were based on the **"Default RWD Theme** but beyond it, has some global parameters that can be easily changed.
+With this module you can change the colors of your store without advanced programming skills. The changes were based on the **Default RWD Theme** but beyond it, has some global parameters that can be easily changed.
 
 If your store already has a super customizable theme, you can set the colors as `!important`, on admin.
 
