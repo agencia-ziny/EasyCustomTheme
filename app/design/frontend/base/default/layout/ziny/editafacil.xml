@@ -17,7 +17,7 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
-<layout version="1.0.1">
+<layout version="1.0.2">
     <default translate="label" module="page">
         <reference name="head">
             <action method="addCss" ifconfig="editafacil/definicoes/ativo">
